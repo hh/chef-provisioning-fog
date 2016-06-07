@@ -112,7 +112,7 @@ module FogDriver
         image ||= image_for(image_spec)
         time_elapsed = 0
         sleep_time = 10
-        max_wait_time = 300
+        max_wait_time = 1800
         if !yield(image)
           action_handler.report_progress "waiting for image #{image_spec.name} (#{image.id} on #{driver_url}) to be active ..."
           while time_elapsed < max_wait_time && !yield(image)
